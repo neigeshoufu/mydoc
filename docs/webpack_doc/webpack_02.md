@@ -10,6 +10,7 @@ npm i vue-loader vue-template-compiler -d
 npm i vue-loader-plugin -S
 ```
 - 配置vue-loader-plugin
+
 ```
 //踩坑记录！！！
 //Vue-loader在15.*之后的版本都是 vue-loader的使用都是需要伴生 VueLoaderPlugin的
@@ -19,14 +20,18 @@ plugins: [
         new VueLoaderPlugin()  //注册VueLoaderPlugin
     ],
 ```
+
 - 在main.js项目入口文件中引入```Vue.js```。
+
 ```
 import Vue from 'vue'
 //或者
 import Vue from '../node_modules/vue/dist/vue.js'
 ```
+
 - ⚠```import Vue from 'vue'```这种方式，引入的是vue.common.js，导入的Vue功能不完整.只提供了runtime-only的方式。使用这种需要配合```render```渲染组件:
 **index.js**
+
 ```
 var vm = new Vue({
     el:'#app',
@@ -47,6 +52,7 @@ var vm = new Vue({
 ```
 #### **1.2 抽离组件**
 - 新建```login.vue```
+
 ```
 <template>
     <div>
@@ -76,7 +82,9 @@ export default{
 
 </style>
 ```
+
 - ```index.js```中引入```login.vue```
+
 ```
 //导入login组件
 import  login from './login.vue'  
@@ -101,6 +109,7 @@ npm i vue-router -s
 import VueRouter from 'vue-router'
 ```
 - 手动创建路由及其对象
+
 ```
 Vue.use(VueRouter)
 
@@ -113,6 +122,7 @@ var router = new VueRouter({
 })
 ```
 - 挂载路由对象
+
 ```
 var vm = new Vue({
     el:'#app',
@@ -130,6 +140,7 @@ import goodlist from './main/goodlist.vue'
 - 如1.1创建路由对象
 - 显示路由
 **在主组件,把路由放到页面上**
+
 ```
 <template>
     <div>
@@ -145,6 +156,7 @@ import goodlist from './main/goodlist.vue'
 #### **2.3 抽离路由**
 - 新建```router.js```
 - 引入子组件
+
 ```
 // //导入Account的两个子组件
 import login from './subcom/login.vue'
@@ -152,6 +164,7 @@ import register from './subcom/register.vue'
 ```
 - ```index.js```里面要导入```router.js```
 - 在```router.js```里面配置
+
 ```
 **路由抽离 */
 import VueRouter from 'vue-router'
@@ -162,8 +175,6 @@ import goodlist from './main/goodlist.vue'
 //导入Account的两个子组件
 import login from './subcom/login.vue'
 import register from './subcom/register.vue'
-
-
 
 //创建路由对象
 var router = new VueRouter({
@@ -186,6 +197,7 @@ export default router
 ### **3.样式**
 #### **3.1 在抽离的组件中使用局部样式**
 - 为```style```标签添加```scoped```属性
+
 ```
 <style scoped>
 div{
