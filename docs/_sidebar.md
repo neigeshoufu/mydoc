@@ -8,6 +8,7 @@
 * node.js
 
  - [基本了解](node.js/01-起步.md)
+ - [ES6+异步操作](node.js/异步.md)
 
 * monogodb
 
