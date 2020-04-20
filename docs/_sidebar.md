@@ -9,6 +9,8 @@
 
  - [基本了解](node.js/01-起步.md)
  - [ES6+异步操作](node.js/异步.md)
+ - [node模块化](node.js/02-模块化.md)
+ - [express和前端交互](node.js/04-接收前端提交的数据.md)
 
 * monogodb
 
