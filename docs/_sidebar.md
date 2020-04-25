@@ -16,3 +16,7 @@
 
  - [安装以及简单使用](mongodb/安装及简单使用.md)
  - [node操作mongodb](mongodb/node操作mongodb.md)
+
+* Electron
+
+ - [试玩Electron](Electron/试玩electron.md)
