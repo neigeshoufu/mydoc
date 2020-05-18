@@ -32,7 +32,7 @@ $(document).on('copy', function (){
 
 $('.waifu-tool .fui-home').click(function (){
     //window.location = 'https://www.fghrsh.net/';
-    window.location = window.location.protocol+'//'+window.location.hostname+'/'
+     window.open('https://neigeshoufu.github.io/mydoc/#/')
 });
 
 $('.waifu-tool .fui-eye').click(function (){
